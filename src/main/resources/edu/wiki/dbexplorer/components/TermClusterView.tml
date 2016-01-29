@@ -1,0 +1,14 @@
+<t:container xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+	<div class="rowVector">
+		<div class="row">
+			<div class="col-md-4"><h4>Distance</h4></div>
+			<div class="col-md-8"><h4>Term</h4></div> 
+		</div>
+		<t:loop source="vectorElements" value="term">
+			<div class="row">
+				<div class="col-md-4">${term.key}</div> 
+				<div class="col-md-8">${term.value}</div> 
+			</div>
+		</t:loop>
+	</div>
+</t:container>

@@ -1,0 +1,52 @@
+<html t:type="layout" title="dbexplorer Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+      
+    <div class="row">
+	    <t:form t:id="search">
+	       	<div class="col-md-2">
+				<t:label for="searchTerm"/>
+	       	</div> 
+	       	<div class="col-md-4">
+	            <t:textarea rows="4" cols="500" t:id="searchTerm" t:value="text"/>
+	       	</div> 
+	       	<div class="col-md-4">
+				<t:submit t:id="submit" value="submit"/>
+			</div> 
+	    </t:form>
+    </div>
+
+	<t:if test="vector">
+		<div class="rowView">
+			<div class="row">
+				<div class="col-md-1">
+					<h3>Text:</h3>
+				</div>
+				<div class="col-md-3">
+					<h3>${text}</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					ESASearcher.getConceptVector
+				</div>
+				<div class="col-md-4">
+					ESASearcherClusters.ClustersFeatureVectorByCentroid
+				</div>
+				<div class="col-md-4">
+					ESASearcherClusters.ClustersFeatureVectorByMembership
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<t:ConceptVectorView vector="vector"/>
+				</div>
+				<div class="col-md-4">
+					<t:ClusterVectorView vector="clusterVector1"/>
+				</div>
+				<div class="col-md-4">
+					<t:ClusterVectorView vector="clusterVector2"/>
+				</div>
+			</div>
+		</div>
+	</t:if>
+</html>

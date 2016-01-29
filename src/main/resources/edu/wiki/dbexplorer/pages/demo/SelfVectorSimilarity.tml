@@ -1,0 +1,31 @@
+<html t:type="layout" title="dbexplorer Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+      
+    <div class="row">
+	    <t:form t:id="search">
+	       	<div class="col-md-2">
+				<t:label for="searchTerm"/>
+	       	</div> 
+	       	<div class="col-md-3">
+	            <t:textarea t:id="searchTerm" t:value="doc1"/>
+	       	</div> 
+v	       	<div class="col-md-3">
+	            <t:textarea t:id="searchTerm2" t:value="doc2"/>
+	       	</div> 
+	       	<div class="col-md-3">
+				<t:submit t:id="submit" value="submit"/>
+			</div> 
+	    </t:form>
+    </div>
+
+	<div class="rowView">
+		<div class="row">
+			<div class="col-md-1">
+				<h3>Similarity:</h3>
+			</div>
+			<div class="col-md-3">
+				<h3>${similarity}</h3>
+			</div>
+		</div>
+	</div>
+</html>

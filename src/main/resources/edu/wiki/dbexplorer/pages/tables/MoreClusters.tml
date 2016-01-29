@@ -1,0 +1,52 @@
+<html t:type="layout" title="dbexplorer Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+      
+    <div class="row">
+	    <t:form t:id="search">
+	       	<div class="col-md-2">
+				<t:label for="searchTerm"/>
+	       	</div> 
+	       	<div class="col-md-2">
+	            <t:textfield t:id="searchTerm" t:value="clusterId" size="20"/>
+	       	</div> 
+	       	<div class="col-md-4">
+				<t:submit t:id="submit" value="submit"/>
+			</div> 
+	    </t:form>
+    </div>
+
+	<t:if test="members">
+		<div class="rowView">
+			<div class="row">
+				<div class="col-md-1">
+					<h3>Cluster:</h3>
+				</div>
+				<div class="col-md-3">
+					<h3>${clusterId}</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					cluster members
+				</div>
+				<div class="col-md-4">
+					cluster core
+				</div>
+				<div class="col-md-4">
+					centroid
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<t:ConceptVectorView vector="members"/>
+				</div>
+				<div class="col-md-4">
+					<t:ConceptVectorView vector="core"/>
+				</div>
+				<div class="col-md-4">
+					<t:ConceptVectorView vector="centroid"/>
+				</div>
+			</div>
+		</div>
+	</t:if>
+</html>

@@ -1,0 +1,35 @@
+<html t:type="layout" title="dbexplorer Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+      
+    <div class="row">
+	    <t:form t:id="search">
+	       	<div class="col-md-2">
+				<t:label for="searchTerm"/>
+	       	</div> 
+	       	<div class="col-md-2">
+	            <t:textfield t:id="searchTerm" t:value="surfaceName" size="20"/>
+	       	</div> 
+	       	<div class="col-md-4">
+				<t:submit t:id="submit" value="submit"/>
+			</div> 
+	    </t:form>
+    </div>
+
+	<t:if test="vector">
+		<div class="rowView">
+			<div class="row">
+				<div class="col-md-1">
+					<h3>Surface name:</h3>
+				</div>
+				<div class="col-md-3">
+					<h3>${surfaceName}</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<t:ConceptVectorView vector="vector"/>
+				</div>
+			</div>
+		</div>
+	</t:if>
+</html>

@@ -1,0 +1,33 @@
+<html t:type="layout" title="dbexplorer Index"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+	<h3>
+		Tables
+	</h3>
+	<div>
+		<t:pagelink page="tables/terms">terms</t:pagelink>
+	</div>
+	<div>
+		<t:pagelink page="tables/concepts">concepts</t:pagelink>
+	</div>
+	<div>
+		<t:pagelink page="tables/clusters">clusters</t:pagelink>
+	</div>
+	<div>
+		<t:pagelink page="tables/termclusters">term clusters</t:pagelink>
+	</div>
+	<div>
+		<t:pagelink page="tables/moreclusters">alternative clusters</t:pagelink>
+	</div>
+	<div>
+		<t:pagelink page="tables/surfacenames">surface names</t:pagelink>
+	</div>
+	<h3>
+		Demo
+	</h3>
+	<div>
+		<t:pagelink page="demo/usingclusters">Demo using clusters</t:pagelink>
+	</div>
+	<div>
+		<t:pagelink page="demo/selfvectorsimilarity">Self Vectors Similarity</t:pagelink>
+	</div>
+</html>
